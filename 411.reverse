@@ -1,0 +1,11 @@
+Echo “Enter a 5 digit number”
+Read num
+n = $num
+rev=0
+while [ $num -ne 0 ]
+do
+r = `expr $num % 10`
+rev = `expr $rev \* 10 + $r`
+num = `expr $num / 10`
+done
+Echo “Reverse of $n is $rev”
