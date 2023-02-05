@@ -1,0 +1,14 @@
+Echo “Enter value for a:”
+Read a
+Echo “Enter value for b:”
+Read b
+Clear
+Echo “Values of variables before swapping”
+Echo A = $a
+Echo B = $b
+Echo Values of variables after swapping
+a = `expr $a + $b`
+b = `expr $a – $b`
+a = `expr $a – $b`
+Echo A = $a
+Echo B = $b
