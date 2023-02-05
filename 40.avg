@@ -1,0 +1,10 @@
+Echo “Enter four integers with space between”
+Read a b c d
+Sum =`expr $a + $b + $c + $d`
+Avg =`expr $sum / 4`
+Dec =`expr $sum % 4`
+Dec =`expr \ ($dec \* 1000 \) / 4`
+Product =`expr $a \* $b \* $c \* $d`
+Echo Sum = $sum
+Echo Average = $avg. $dec
+Echo Product = $product
