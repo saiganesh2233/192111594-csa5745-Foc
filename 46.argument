@@ -1,0 +1,6 @@
+add = `expr $1 + $2`
+sub = `expr $1 – $2`
+mul = `expr $1 \* $2`
+Echo “Addition of $1 and $2 is $add”
+Echo “Subtraction of $2 from $1 is $sub”
+Echo “Multiplication of $1 and $2 is $mul”
