@@ -1,0 +1,30 @@
+Echo “Enter main string:”
+Read main
+l1 = `Echo $main | wc -c`
+l1 = `expr $l1 – 1`
+Echo “Enter sub string:”
+Read sub
+l2 = `Echo $sub | wc -c`
+l2 = `expr $l2 – 1`
+n = 1
+m = 1
+pos = 0
+while [ $n -le $l1 ]
+do
+a = `Echo $main | cut -c $n`
+b = `Echo $sub | cut -c $m`
+if [ $a = $b ]
+then
+n = `expr $n + 1`
+m = `expr $m + 1`
+pos = `expr $n – $l2`
+r = `expr $m – 1`
+if [ $r -eq $l2 ]
+then
+break
+fi
+else
+pos = 0
+m = 1
+n = `expr $n + 1`
+fi
